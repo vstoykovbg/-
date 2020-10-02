@@ -103,7 +103,7 @@ $ ./random-words.py 50-хиляди-популярни-думи.txt
 От тук взимаме списък с думи от Читанка:
 
 ```
-wget https://raw.githubusercontent.com/aquilax/bg-words-dict/master/dict.txt
+$ wget https://raw.githubusercontent.com/aquilax/bg-words-dict/master/dict.txt
 ```
 
 В списъка има и думи от други езици, редки думи (съдържащи се само в една книга) както и знакови низове, които трудно биха могли да се нарекат думи.
@@ -111,7 +111,7 @@ wget https://raw.githubusercontent.com/aquilax/bg-words-dict/master/dict.txt
 Филтрираме думите с големи букви и махаме думите с не повече от 4 букви:
 
 ```
-grep '[а-я]' dict.txt | sed -E 's/\b\w{1,4}\b//g' | sort -u > голям-списък.txt
+$ grep '[а-я]' dict.txt | sed -E 's/\b\w{1,4}\b//g' | sort -u > голям-списък.txt
 ```
 
 И пак има доста странни неща като думи съдържащи повторения на една буква.
